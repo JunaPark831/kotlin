@@ -99,6 +99,12 @@ class KotlinStudy{
 
             namedArgument(a="a","b","c")
             println(sum2(3,4))
+
+            var person1 = Person("Duke")
+            person1.age = 15
+            println("${person1.name} is ${person1.age} years old")
+
+
         }
         fun function1(a: Int):String{
             return "a" + "B"
