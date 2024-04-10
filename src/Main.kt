@@ -52,8 +52,28 @@ class KotlinStudy{
             num /= 2
             num %= 3
 
-            var randomNum = kotlin.random.Random.nextInt(1,10)
+            var randomNum = kotlin.random.Random.nextInt(0,199)
             println(randomNum)
+            println(randomNum > 6)
+
+            var rdn = kotlin.random.Random.nextInt(0,199)
+            if( rdn < 100){
+                println("your score is under 100 : $rdn")
+            } else if(rdn > 100) {
+                println("your score is over 100 : $rdn")
+            } else{
+                println("your score is 100 : $rdn")
+            }
+            var max = if(randomNum > rdn) randomNum else rdn
+            println(max)
+
+            var x = 10
+            while (x>5){
+                println(x--)
+            }
+            println("${x+10}이다.")
+
+
         }
     }
 }
