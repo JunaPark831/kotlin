@@ -2,6 +2,7 @@
 class KotlinStudy{
     companion object {
         @JvmStatic
+
         fun main(args: Array<String>) {
             val value = 4
             println("Hello World!")
@@ -73,7 +74,51 @@ class KotlinStudy{
             }
             println("${x+10}이다.")
 
+            var num11 : Int = kotlin.random.Random.nextInt(1,10)
+            when(num11){
+                1, 2, 3 -> println("num11 is between 1 and 3")
+                in 4 .. 8 -> println("num11 is between 4 and 8 ")
+                else -> println("num11 is between 9 and 10")
+            }
+            println(num11)
 
+            when{
+                num11>5 -> println("num11 is over 5")
+                else -> println("num11 is under 5")
+            }
+
+            for ( i in 1..10){
+                println(i)
+            }
+            println()
+
+            for (i in 10 downTo 1 step 2){
+                println(i)
+
+            }
+
+            namedArgument(a="a","b","c")
+
+        }
+        fun function1(a: Int):String{
+            return "a" + "B"
+        }
+
+        //return 생략 방식
+        fun sum2(a: Int, b : Int) = a+b
+
+        fun multi(a: Int, b : Int) = (a*b)
+
+        fun noReturnFunction(a: String){
+            println(a)
+        }
+
+        fun defaultParameter(a: String = "default value"){
+            println(a)
+        }
+
+        fun namedArgument(a:String, b:String, c:String){
+            print("$a $b $c")
         }
     }
 }
