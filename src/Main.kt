@@ -98,7 +98,7 @@ class KotlinStudy{
             }
 
             namedArgument(a="a","b","c")
-
+            println(sum2(3,4))
         }
         fun function1(a: Int):String{
             return "a" + "B"
@@ -118,7 +118,27 @@ class KotlinStudy{
         }
 
         fun namedArgument(a:String, b:String, c:String){
-            print("$a $b $c")
+            print("$a $b $c\n")
         }
     }
 }
+
+class Person{
+    var name: String = "Park"
+    var age: Int = 25
+    var height: Int = 183
+
+    constructor(name_: String,age_:Int, height:Int){
+        this.age = age_
+        this.height = height
+        this.name = name_
+        println("Person $name_, $age_, $height")
+    }
+
+    constructor(name:String):this(name,15, 183)
+
+    fun sayHello(){
+        println("Hello I'm $name")
+    }
+}
+
